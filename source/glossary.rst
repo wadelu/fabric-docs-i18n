@@ -24,8 +24,8 @@ single point of failure), allowing for peers belonging to different Members to
 discover all existing peers on a channel.
 
 锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。通道中的每个
- `成员< Member_>`都有一个（或多个，以防单点故障）锚节点，允许属于不同成员身份的节点来
-发现通道中存在的其它节点。
+ `成员< Member_>`都有一个（或多个，以防单点故障）锚节点，允许属于不同成员身份的
+ 节点来发现通道中存在的其它节点。
 
 .. _Block:
 
@@ -74,14 +74,15 @@ instructions (business logic) for modifying the assets.
 Channel - 通道
 --------------
 
-A channel is a private blockchain overlay which allows for data
-isolation and confidentiality. 
+A channel is a private blockchain overlay which allows for data isolation and 
+confidentiality. 
 A channel-specific ledger is shared across the peers in the channel, and transacting 
 parties must be properly authenticated to a channel in order to interact with it.  
 Channels are defined by a Configuration-Block_.
 
 通道是基于数据隔离和保密构建的一个私有区块链。特定通道的账本在该通道中的所有节点共享，
-交易方必须通过该通道的正确验证才能与账本进行交互。通道是由一个“配置块”来定义的。
+交易方必须通过该通道的正确验证才能与账本进行交互。通道是由一个
+ `配置块< Configuration-Block_>`来定义的。
 
 .. _Commitment:
 
@@ -92,8 +93,9 @@ Each Peer_ on a channel validates ordered blocks of
 transactions and then commits (writes/appends) the blocks to its replica of the
 channel Ledger_. Peers also mark each transaction in each block as valid or invalid.
 
-一个通道中的每个对等节点都会验证交易的有序区块，然后将区块提交（写或追加）至该通道上
-账本的各个副本。对等节点也会标记每个区块中的每笔交易的状态是有效或者无效。
+一个通道中的每个 `对等节点< Peer_>`都会验证交易的有序区块，然后将区块提交（写或追加）
+至该通道上 `账本< Ledger_>`的各个副本。对等节点也会标记每个区块中的每笔交易的状态是有
+效或者无效。
 
 .. _Concurrency-Control-Version-Check:
 
@@ -310,9 +312,9 @@ in order to communicate with the network ordering service on behalf of the
 member. The ordering service "delivers" blocks to the leading peer(s) on a
 channel, who then distribute them to other peers within the same member cluster.
 
-每一个成员在其订阅的通道上可以拥有多个节点，其中一个节点会作为通道的主导节点，代表该成
-员与网络排序服务节点通信。排序服务将区块传递给通道上的主导节点，主导节点再将此区块分发
-给同一成员集群下的其他节点。
+每一个 `成员< Member_>`在其订阅的通道上可以拥有多个节点，其中一个节点会作为通道的主
+导节点，代表该成员与网络排序服务节点通信。排序服务将区块传递给通道上的主导节点，主
+导节点再将此区块分发给同一成员集群下的其他节点。
 
 .. _Ledger:
 
@@ -361,7 +363,7 @@ Membership Services - 成员服务
 
 Membership Services authenticates, authorizes, and manages identities on a
 permissioned blockchain network. The membership services code that runs in peers
-and orderers both authenticates and authorizes blockchain operations.  It is a
+and orderers both authenticates and authorizes blockchain operations. It is a
 PKI-based implementation of the Membership Services Provider (MSP) abstraction.
 
 成员服务在许可的区块链网络上做认证、授权和身份管理。运行于节点和排序服务的成员服务代码均
@@ -381,7 +383,7 @@ identity material tied to each Member_.
 
 预先定义好的一组节点，将交易排序放入区块。排序服务独立于节点流程之外，并以先到先得的方式
 为网络上所有通道做交易排序。交易排序支持可插拔实现，目前默认实现了SOLO和Kafka。排序服务是
-整个网络的公用绑定，包含与每个成员相关的加密材料。
+整个网络的公用绑定，包含与每个 `成员< Member_>`相关的加密材料。
 
 .. _Peer:
 
