@@ -23,9 +23,9 @@ Each Member_ on a channel has an anchor peer (or multiple anchor peers to preven
 single point of failure), allowing for peers belonging to different Members to
 discover all existing peers on a channel.
 
-锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。通道中的每个 
-`成员< member_>`_都有一个（或多个，以防单点故障）锚节点，允许属于不同成员身份的节
-点来发现通道中存在的其它节点。
+锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。通道中的每个
+ :ref:`member` 都有一个（或多个，以防单点故障）锚节点，允许属于不同成员身份的节点来
+发现通道中存在的其它节点。
 
 .. _Block:
 
@@ -35,8 +35,7 @@ Block - 区块
 An ordered set of transactions that is cryptographically linked to the
 preceding block(s) on a channel.
 
-在一个通道上，（区块是）一组有序交易的集合。区块往往通过密码学手段（Hash 值）连接
-到前导区块。
+区块是通道上一组有序交易的集合，通过密码学手段（哈希加密）连接到前导区块。
 
 Zhu Jiang：区块是一组有序的交易集合，在通道中经过加密（哈希加密）后与前序区块连接。
 
@@ -276,7 +275,7 @@ After instantiation, peers that have the chaincode installed can accept chaincod
 invocations.
 
 在特定通道上启动和初始化链码应用的过程。实例化完成后，装有链码的节点可以接受链码调用。
-（译注：在lccc中将ChaincodeData保存到state中，然后deploy Chaincode并执行Init方法）
+（译注：在lccc中将链码数据保存到状态中，然后部署并执行Init方法）
 
 .. _Invoke:
 
