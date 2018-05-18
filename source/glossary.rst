@@ -23,9 +23,9 @@ Each Member_ on a channel has an anchor peer (or multiple anchor peers to preven
 single point of failure), allowing for peers belonging to different Members to
 discover all existing peers on a channel.
 
-锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。通道中的每个
-成员都有一个（或多个，以防单点故障）锚节点，允许属于不同成员身份的节点来发现通道
-中存在的其它节点。
+锚节点是通道中能被所有对等节点探测、并能与之进行通信的一种对等节点。通道中的每个 
+`成员< member_>`_都有一个（或多个，以防单点故障）锚节点，允许属于不同成员身份的节
+点来发现通道中存在的其它节点。
 
 .. _Block:
 
