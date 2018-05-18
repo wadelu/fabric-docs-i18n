@@ -8,7 +8,9 @@ agree on what we mean by each specific term. What is chaincode, for example.
 The documentation will reference the glossary as needed, but feel free to
 read the entire thing in one sitting if you like; it's pretty enlightening!
 
-.. _Anchor-Peer:
+专业术语很重要，所以全体“超级账本Fabric”项目的用户和开发人员，都同意我们所说的
+每个特定术语的含义，比如什么是链码。该文档将会按需引用这些术语，如果你愿意的话
+可以随意阅读整个文档，这会非常有启发！
 
 
 .. _Anchor-Peer - 锚节点:
@@ -89,7 +91,7 @@ Commitment - 提交
 
 Each Peer_ on a channel validates ordered blocks of
 transactions and then commits (writes/appends) the blocks to its replica of the
-channel Ledger. Peers also mark each transaction in each block as valid or invalid.
+channel Ledger_. Peers also mark each transaction in each block as valid or invalid.
 
 一个通道中的每个对等节点都会验证交易的有序区块，然后将区块提交（写或追加）至该通道上
 账本的各个副本。对等节点也会标记每个区块中的每笔交易的状态是有效或者无效。
